@@ -1,0 +1,97 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+.slider-container{
+    width: 800px;
+    height: 250px;
+    margin: 10px auto;
+    position: relative;
+}
+.slider-num{
+    position: absolute;
+    z-index: 2;
+    background-color: rgb(0,0,0,0.6);
+    padding: 5px 10px;
+    left: 5px;
+    top: 15px;
+    color: white;
+    border-radius: 5px;
+}
+.slider-container img{
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 1s;
+    width: inherit;
+    height: inherit;
+}
+
+.slider-container img.active{
+    opacity: 1;
+}
+
+.slider-controls{
+    width: 800px;
+    margin: 10px auto;
+
+}
+.slider-controls .prev{
+    float: left;
+    
+}
+
+.slider-controls .next{
+    float: right;
+}
+.slider-controls .indicators{
+    width: 55%;
+    float: left;
+}
+.slider-controls ul{
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+}
+.slider-controls ul li{
+    display: inline-block;
+    background-color: #F6F6F6;
+    color: #333;
+    font-weight: bold;
+    height: 28px;
+    width: 28px;
+    border-radius: 4px;
+    margin: 0 2px;
+    line-height: 28px;
+    cursor: pointer;
+  
+}
+.slider-controls ul li.active{
+    background-color: #009688;
+    color: white;
+}
+.slider-controls .prev,
+.slider-controls .next{
+    color: white;
+    background-color: #009588;
+    padding: 5px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 10px;
+    width: 20%;
+    cursor: pointer;
+}
+.slider-controls .prev.disabled,
+.slider-controls .next.disabled{
+  background-color: rgba(0, 150, 136, 0.5);
+  cursor: no-drop;
+  pointer-events: none;
+  
+}
